@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="shortcut icon" type="image/x-icon"
+		href="#{resource['images/favicon.ico']}" />
+	<title>#{msgs.common_appName}</title>
+<h2>Ta2meen</h2>
+</h:head>
+
+<h:body >
+	<div class="header">
+		 <ui:include src="parts/header.xhtml" />	
+	</div>
+	<hr />
+    <div style="border:0px solid red;min-height:430px !important;">
+    <h:panelGrid columns="2" cellpadding="5">
+    <h:form id="searchForm">
+            <p:outputLabel for="searchMenuId" value="Search By: " />
+            <p:selectOneMenu id="searchMenuId" value="#{searchController.searchType}" style="width:150px">
+                <p:ajax listener="#{searchController.onCountryChange}"/>
+                <f:selectItem itemLabel="Search By" itemValue="" noSelectionOption="true" />
+                <f:selectItems value="#{searchController.searchList}" />
+            </p:selectOneMenu>
+            <h:inputText id="username" value="#{searchController.searchVal}" required="true"  />
+            
+		<p:commandButton value="Search" action="#{searchController.search}"
+			update="searchForm" />
+		
+	</h:form>
+        </h:panelGrid>   
+	<ui:insert name="body" />
+	</div>
+
+
+	<!-- ++++++++++++++++++++++++++++++++++ -->
+
+
+	<p:growl id="growl" life="3600" showDetail="True" autoUpdate="true" />
+
+	<p:dialog modal="true" widgetVar="statusDialog"
+		styleClass="statusDialog" draggable="false" closable="false"
+		resizable="false" showHeader="false">
+		<p:graphicImage library="images" name="loading.gif" />
+	</p:dialog>
+
+
+	<script type="text/javascript">
+		function start() {
+		    PF('statusDialog').show();
+		}
+		
+		function stop() {
+		    PF('statusDialog').hide();
+		}
+	</script>
+
+<ui:include src="parts/footer.xhtml" />
+
+</h:body>
+
+</html>

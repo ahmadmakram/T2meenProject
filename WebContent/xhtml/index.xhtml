@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+	
+	
+	<h:outputText value="Hello JSF" />
+	<p:editor value="Hello Primefaces" />
+	<h:form id="empForm">
+		<p:commandButton value="Add default" actionListener="#{empBean.addEmployee}"
+			update="empForm" />
+		<h3>Hello</h3>
+		<h:outputText id="employeeId"
+			value="#{empBean.employee.firstName} #{empBean.employee.lastName}" />
+	</h:form>
+</h:body>
+</html>
