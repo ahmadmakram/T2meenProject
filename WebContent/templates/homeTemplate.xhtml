@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<link rel="stylesheet" type="text/css"
+		href="#{request.contextPath}/resources/css/Style.css" />
+	<title>#{msg.common_appName}</title>
+	<h2 style="align: center;">Ta2meen</h2>
+</h:head>
+
+<h:body
+	style="background: url('#{resource['images:AnimatedHeaderBackgrounds_02.jpg']}')">
+	<div class="header">
+		<ui:include src="parts/header.xhtml" />
+	</div>
+	<hr />
+	<div style="border: 0px solid red; min-height: 430px !important;">
+
+		<ui:insert name="body" />
+
+	</div>
+
+
+	<!-- ++++++++++++++++++++++++++++++++++ -->
+
+
+	<p:growl id="growl" life="3600" showDetail="True" autoUpdate="true" />
+
+	<p:dialog modal="true" widgetVar="statusDialog"
+		styleClass="statusDialog" draggable="false" closable="false"
+		resizable="false" showHeader="false">
+		<p:graphicImage library="images" name="loading.gif" />
+	</p:dialog>
+
+
+	<script type="text/javascript">
+		function start() {
+			PF('statusDialog').show();
+		}
+
+		function stop() {
+			PF('statusDialog').hide();
+		}
+	</script>
+
+	<ui:include src="parts/footer.xhtml" />
+
+</h:body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:f="http://java.sun.com/jsf/core"  
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Ta2meen</title>
+    </h:head>
+    <h:body>
+    <div class="container">
+    <div class="login-mn-cont">
+            <div class="login-cont">
+        <h:form id="loginForm">
+        
+            <p:growl id="msg" showDetail="true" life="3000" />
+            <p:panel header="Login" style="width: 860px;">
+            <h:panelGrid columns="2" cellpadding="5">
+            <h:outputLabel for="username"  value="Username:" />
+            <h:inputText id="username" value="#{loginController.userName}" required="true" label="username" />
+ 
+            <h:outputLabel for="password"  value="Password:" />
+          
+            <h:inputText id="password" value="#{loginController.password}" required="true" label="password" />
+ 
+            <f:facet name="footer">
+                <h:commandButton value="Login" update="msg" action="#{loginController.loginAction}" />
+            </f:facet>  
+        </h:panelGrid>
+                
+            </p:panel>
+        </h:form>
+        </div>
+        </div>
+        </div>
+    </h:body> 
+
+</html>
