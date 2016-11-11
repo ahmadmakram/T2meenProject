@@ -1,49 +1,60 @@
 package com.tameen.controller;
 
 import java.io.Serializable;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-import com.tameen.model.Project;
+import com.tameen.model.Employee;
+import com.tameen.model.Member;
 import com.tameen.service.SearchService;
+import com.tameen.util.SearchType;
 
-@Component()
-public class SearchController implements Serializable {
+@Component("searchController")
+@Scope("request")
+public class SearchController extends BaseController implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private String searchType;
 	private String searchVal;
 	private Map<String, String> searchList;
-	private Project project;
 	@Autowired
 	private SearchService searchService;
-
+	private Member memberResult;
+	private Employee employeeResult;
+	
 	public SearchController() {
 		searchList = new HashMap<String, String>();
-		searchList.put("Iqama", "Iqama");
-		searchList.put("Project", "project");
-		searchList.put("acc", "acc");
-		project=new Project();
-		project.setId(1l);
-		project.setName("xxxxxxxx");
-		project.setInsertionDate(new Date());
-		project.setProjectValue(20000111);
-		project.setInsertionDate(new Date());
+		searchList.put(SearchType.IQAMA.getCode(), SearchType.IQAMA.getCode());
+		searchList.put(SearchType.PROJECT.getCode(), SearchType.PROJECT.getCode());
+		searchList.put(SearchType.EMPLOYEE_ID.getCode(), SearchType.EMPLOYEE_ID.getCode());
 	}
 
 	public void search() {
-		System.out.println("searchhhhhhhhhhhhhhhhhhhhhhhhh");
-		switch (searchType) {
-		case "Iqama":
-		//	searchResult = searchService.findEmployeeById(Long.parseLong(getSearchVal()));
-			break;
-
-		default:
-			break;
+		if (getSearchType().equals(SearchType.IQAMA.getCode())) {
+			memberResult = searchService.findEmployeeByIqamaId(Long.parseLong(getSearchVal()));
+			setCurrentPath("/xhtml/MemberResult.xhtml");
 		}
+		else
+			setCurrentPath("/xhtml/index.xhtml");
+	}
+
+	public Member getMemberResult() {
+		return memberResult;
+	}
+
+	public void setMemberResult(Member memberResult) {
+		this.memberResult = memberResult;
+	}
+
+	public Employee getEmployeeResult() {
+		return employeeResult;
+	}
+
+	public void setEmployeeResult(Employee employeeResult) {
+		this.employeeResult = employeeResult;
 	}
 
 	public String getSearchType() {
@@ -71,25 +82,7 @@ public class SearchController implements Serializable {
 	}
 
 	public void onCountryChange() {
-		if (searchType != null && !searchType.equals(""))
-			System.out.println(searchType);
-
-	}
-
-	public Project getProject() {
-		return project;
-	}
-
-	public void setProject(Project project) {
-		this.project = project;
-	}
-
-	public SearchService getSearchService() {
-		return searchService;
-	}
-
-	public void setSearchService(SearchService searchService) {
-		this.searchService = searchService;
+		System.out.println("getSearchType"+getSearchType());
 	}
 
 }

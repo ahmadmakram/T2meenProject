@@ -8,35 +8,21 @@
 
 <h:head>
 	<link rel="stylesheet" type="text/css"
-			href="#{request.contextPath}/resources/css/homestyle.css" />
-	<link rel="shortcut icon" type="image/x-icon"
-		href="#{resource['images/favicon.ico']}" />	
-	<title>#{msgs.common_appName}</title>
-<h2>Ta2meen</h2>
+		href="#{request.contextPath}/resources/css/Style.css" />
+	<title>#{msg.common_appName}</title>
+	<h2 style="align: center;">Ta2meen</h2>
 </h:head>
 
-<h:body >
+<h:body
+	style="background: url('#{resource['images:AnimatedHeaderBackgrounds_02.jpg']}')">
 	<div class="header">
-		 <ui:include src="parts/header.xhtml" />	
+		<ui:include src="parts/header.xhtml" />
 	</div>
 	<hr />
-    <div style="border:0px solid red;min-height:430px !important;">
-    <h:panelGrid columns="2" cellpadding="5">
-    <h:form id="searchForm">
-            <p:outputLabel for="searchMenuId" value="Search By: " />
-            <p:selectOneMenu id="searchMenuId" value="#{searchController.searchType}" style="width:150px">
-                <p:ajax listener="#{searchController.onCountryChange}"/>
-                <f:selectItem itemLabel="Search By" itemValue="" noSelectionOption="true" />
-                <f:selectItems value="#{searchController.searchList}" />
-            </p:selectOneMenu>
-            <h:inputText id="username" value="#{searchController.searchVal}" required="true"  />
-            
-		<p:commandButton value="Search" action="#{searchController.search}"
-			update="searchForm" />
-		
-	</h:form>
-        </h:panelGrid>   
-	<ui:insert name="body" />
+	<div style="border: 0px solid red; min-height: 430px !important;">
+
+		<ui:insert name="body" />
+
 	</div>
 
 
@@ -54,15 +40,15 @@
 
 	<script type="text/javascript">
 		function start() {
-		    PF('statusDialog').show();
+			PF('statusDialog').show();
 		}
-		
+
 		function stop() {
-		    PF('statusDialog').hide();
+			PF('statusDialog').hide();
 		}
 	</script>
 
-<ui:include src="parts/footer.xhtml" />
+	<ui:include src="parts/footer.xhtml" />
 
 </h:body>
 

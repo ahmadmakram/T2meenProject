@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body style="background: url('#{resource['images:BG.jpg']}') repeat">
+	<h:form>
+		<p:panelGrid id="resultgrid" columns="2">
+			<p:panelGrid id="firstcolumn"  columns="2">
+				<h:outputText value="#{msg.member_id}" />
+				<h:outputText value="#{searchController.memberResult.id}" />
+				<h:outputText value="#{msg.idNumber}" />
+				<h:outputText value="#{searchController.memberResult.idNumber}" />
+				<h:outputText value="#{msg.member_Name}" />
+				<h:outputText value="#{searchController.memberResult.name}" />
+				<h:outputText value="#{msg.empId}" />
+				<h:outputText value="#{searchController.memberResult.empId.id}" />
+				<h:outputText value="#{msg.dependentIdNumber}" />
+				<h:outputText value="#{searchController.memberResult.empId.name}" />
+				<h:outputText value="#{msg.gender}" />
+				<h:outputText value="#{searchController.memberResult.gender}" />
+				<h:outputText value="#{msg.relation}" />
+				<h:outputText value="#{searchController.memberResult.relation}" />
+				<h:outputText value="#{msg.birthDate}" />
+				<h:outputText value="#{searchController.memberResult.birthDate}" />
+				<h:outputText value="#{msg.age}" />
+				<h:outputText value="#{searchController.memberResult.age}" />
+				<h:outputText value="#{msg.country}" />
+				<h:outputText value="#{searchController.memberResult.country}" />
+				<h:outputText value="#{msg.mobile}" />
+				<h:outputText value="#{searchController.memberResult.mobile}" />
+				<h:outputText value="#{msg.department}" />
+				<h:outputText value="#{searchController.memberResult.department.name}" />
+			</p:panelGrid>
+			<p:panelGrid id="secondcolumn" columns="2">
+					<h:outputText value="#{msg.insur_Class}" />
+				<h:outputText value="#{searchController.memberResult.insurClass}" />
+				<h:outputText value="#{msg.insuranceEffectiveDate}" />
+				<h:outputText value="#{searchController.memberResult.insuranceEffectiveDate}" />
+				<h:outputText value="#{msg.insuranceExpiryveDate}" />
+				<h:outputText value="#{searchController.memberResult.insuranceExpiryveDate}" />
+				<h:outputText value="#{msg.insurancePolicyNo}" />
+				<h:outputText value="#{searchController.memberResult.insurancePolicyNo}" />
+				<h:outputText value="#{msg.insuranceCompany}" />
+				<h:outputText value="#{searchController.memberResult.insuranceCompany}" />
+				<h:outputText value="#{msg.premiumValue}" />
+				<h:outputText value="#{searchController.memberResult.premiumValue}" />
+				<h:outputText value="#{msg.status}" />
+				<h:outputText value="#{searchController.memberResult.status.name}" />
+				
+				
+			</p:panelGrid>
+		</p:panelGrid>
+	</h:form>
+</h:body>
+</html>

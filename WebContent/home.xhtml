@@ -8,21 +8,41 @@
 	xmlns:c="http://java.sun.com/jsp/jstl/core">
 
 
-<ui:composition
-	template="/templates/homeTemplate.xhtml">
-	 
+<ui:composition template="/templates/homeTemplate.xhtml">
+
 	<ui:define name="title">
 
 		<h:outputText value="#{msg.common_appName}"></h:outputText>
-		
+
 	</ui:define>
 	<ui:define name="body">
-	<h:panelGroup id="bodyPanel">
-		<ui:include src="#{loginController.currentPath}" />
-	</h:panelGroup>
-	
-</ui:define>
-
+		<p:messages id="messages" autoUpdate="true" closable="false" />
+		<h:form id="searchForm">
+			<h:panelGrid columns="2" cellpadding="5">
+				<p:outputLabel for="searchMenuId" value="Search By: " />
+				<p:selectOneMenu id="searchMenuId" required="true"
+					requiredMessage="#{msg.searchtype_required}"
+					value="#{searchController.searchType}" style="width:150px">
+					<p:ajax listener="#{searchController.onCountryChange()}" />
+					<f:selectItem itemLabel="Search By" itemValue=""
+						noSelectionOption="true" />
+					<f:selectItems value="#{searchController.searchList}" />
+				</p:selectOneMenu>
+				<p:outputLabel for="searchVal" value="Search input: " />
+				<p:inputText id="searchVal" value="#{searchController.searchVal}"
+					label="Number" required="true"
+					requiredMessage="#{msg.searchval_required}">
+					<f:convertNumber integerOnly="true" type="number" pattern="" />
+				</p:inputText>
+				<p:commandButton value="Search" action="#{searchController.search}"
+					update="bodyPanel" />
+			</h:panelGrid>
+			<p:separator />
+			<h:panelGroup id="bodyPanel">
+				<ui:include src="#{searchController.currentPath}" />
+			</h:panelGroup>
+			</h:form>
+	</ui:define>
 </ui:composition>
 
 
