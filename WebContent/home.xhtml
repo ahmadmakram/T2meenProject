@@ -23,7 +23,7 @@
 				<p:selectOneMenu id="searchMenuId" required="true"
 					requiredMessage="#{msg.searchtype_required}"
 					value="#{searchController.searchType}" style="width:150px">
-					<p:ajax listener="#{searchController.onCountryChange()}" />
+					<f:ajax listener="#{searchController.onCountryChange}" render="searchForm" />
 					<f:selectItem itemLabel="Search By" itemValue=""
 						noSelectionOption="true" />
 					<f:selectItems value="#{searchController.searchList}" />
