@@ -13,7 +13,8 @@ import org.springframework.context.annotation.Scope;
 
 import com.tameen.model.User;
 import com.tameen.service.UserService;
-import com.tameen.util.Constants;;
+import com.tameen.util.Constants;
+import com.tameen.util.PagesURL;;
 
 @Component
 @Scope(value = "session")
@@ -41,8 +42,7 @@ public class LoginController extends BaseController implements Serializable {
 			if (user.getPassword().equals(getPassword())) {
 				System.out.println("true");
 				setLoggedInUser(user);
-				setCurrentPath("/xhtml/index.xhtml");
-				return "home.xhtml";
+				return PagesURL.HOME_PAGE.getPath();
 			}
 		} else {
 			System.out.println("wrong user name");
