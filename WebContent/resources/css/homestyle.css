@@ -1,0 +1,401 @@
+/*
+* Default
+*/
+html,body,*{border:0;outline: 0;padding: 0;margin: 0;color: #000000;direction: rtl;font-size: 12px !important; font-family: 'Al-Jazeera-Arabic-Regular' !important}
+
+/*
+* Fonts
+*/
+
+
+
+@font-face {font-family: Al-Jazeera-Arabic-Bold;src: url("#{resource['fonts/Al-Jazeera-Arabic-Bold.eot']}");src: url('fonts/Al-Jazeera-Arabic-Bold.eot?#iefix') format('embedded-opentype'),url("#{resource['fonts/Al-Jazeera-Arabic-Bold.woff']}") format('woff'),url("#{resource['fonts/Al-Jazeera-Arabic-Bold.ttf']}") format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: Al-Jazeera-Arabic-Light;src: url("#{resource['fonts/Al-Jazeera-Arabic-Light.eot']}");src: url('fonts/Al-Jazeera-Arabic-Light.eot?#iefix') format('embedded-opentype'),url("#{resource['fonts/Al-Jazeera-Arabic-Light.woff']}") format('woff'),url("#{resource['fonts/Al-Jazeera-Arabic-Light.ttf']}") format('truetype');font-weight: normal;font-style: normal;}
+@font-face {font-family: Al-Jazeera-Arabic-Regular;src: url("#{resource['fonts/Al-Jazeera-Arabic-Regular.eot']}");src: url('fonts/Al-Jazeera-Arabic-Regular.eot?#iefix') format('embedded-opentype'),url("#{resource['fonts/Al-Jazeera-Arabic-Light.woff']}") format('woff'),url("#{resource['fonts/Al-Jazeera-Arabic-Light.ttf']}") format('truetype');font-weight: normal;font-style: normal;}
+/*
+* Main styles
+*/
+
+
+.container{width:98%;margin: auto;display: table;}
+.border{border: 1px solid #e0e0e0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;}
+
+/*
+*home header
+*/
+.header{width: 98%;height: 160px;background: url("#{resource['images/header.jpg']}");background-size: cover;display: block;background-position: center;min-width: 100%;}
+.home-logo{background: url("#{resource['images/header_logo.png']}");width: 320px; display: block; height: 73px; margin: 20px 21px;background-repeat: no-repeat;float: right;}
+.wht-bg{width: 100%;min-width: 100%;display: block;height: 110px; background: #ffffff;}
+
+
+
+.user-data{width: 300px !important;height: 80px !important;display: block;float: left}
+.tp-usr{margin-top: 15px; display: table; float: left;width: 300px !important;}
+.tp-usr a{float: left;margin-right: 20px;}
+.tp-usr a img{display: block;
+    margin-top: 5px;}
+.btm-usr{margin-top: 30px;display: table; float: left;}
+.btm-usr p{margin: 0 !important;float: right;}
+i.sep-sm{    width: 1px;
+    height: 20px;
+    display: block;
+    float: right;
+    background: #cecece;
+    margin: 2px 10px 0 10px;}
+.user-lnk{float: right;}
+.logout{width: 22px;height: 22px;display: block;background: url("#{resource['images/logout.png']}");float: right}
+
+/*
+* Footer
+*/
+.footer{background: #07151f;width: 100%;height: 50px;min-width: 100%; border:none;}
+.footer-top{width: 100%;height: 22px;background: #f5f5f5;display: block;margin-bottom: 20px}
+.footer-btm{background: #040e15;width: 100%;height: 47px;}
+
+.center-txt{color: #cecece;text-align: center !important;margin: 0;}
+
+
+
+
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*    Menu */
+
+
+/* main menu Container*/
+.nav_container{background: #073e69;width: 100%;dirction:rtl;height:50px;}
+.nav_container div{background: #073e69;border:none !important;vertical-align:bottom;}
+.categoryCls .ui-menuitem-text{color:#fff !important;font-size:16px;}
+.groupeCls .ui-menuitem-text{color:#000 !important;}
+.subMenu .ui-menuitem-text{color:#000 !important; }
+
+.categoryCls .ui-menu-list{width:220px !important;
+	background:#F4F4F4;
+    background: -moz-linear-gradient(top, #ffffff, #EEEEEE);
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#EEEEEE));
+ 	
+    /* Rounded Corners */
+    -moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+}    
+.categoryCls .ui-menu-list   a:hover {
+    color:#000 !important; 
+    list-style-image: url("#{resource['images/icons/click2.png']}");
+  }    
+    
+/* _____________________________________________________________________________________________________________________ */
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*    home style classes / all pages */
+.tam_main{width:98%;margin: auto;vertical-align:top !important;padding:5px;min-height:430px;}
+.tam_main_body{width:100%;margin: auto;vertical-align:top !important;padding:5px;min-height:430px;border: 1px solid #e0e0e0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;border-radius: 3px;
+}
+.tam_main_body_content{border:none !important;vertical-align:top !important;min-height:380px !important;height:auto;border:none !important;}
+.tam_page_title_col{height:25px !important;border:none !important;}
+.tam_page_title{text-align:center;color: #083169;font-size: 15px !important;font-family: Al-Jazeera-Arabic-Bold !important;}
+.tam_page_title_col hr{ border: 0;height: 1px;background: #083169;background-image: linear-gradient(to right, #e0e0e0, #083169, #e0e0e0);}
+.tam_related_topics{ vertical-align:top !important;border:none !important;}
+.tam_related_topics_table{vertical-align:top !important;border: 1px solid #e0e0e0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;border-radius: 3px;height:100%;}
+.tam_main_body_row{border:none !important;}
+
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*    Dashboard */
+.tam_dashboard{width:95% !important;margin: auto;display: table;dirction:rtl !important;vaertical-align:top;}
+.tam_dashboard .ui-dashboard-column{width:32.5% !important;padding:3px !important; float:right !important;}
+.tam_dashboard_panel{width:auto !important;margin:3px 3px 3px 3px; width:auto !important;padding:3px !important;}
+.tam_dashboard_panel_grid{border:0px solid #e0e0e0;width:auto !important;padding:0px; margin:0px;}
+.tam_dashboard_panel_permi_image{width:18px !important;height:18px !important;margin:1px;padding:1px;}
+.tam_dashboard_panel_permi_url{height:18px !important;margin:0px;padding:0px;color:#1e90ff !important;text-decoration: none;}
+.tam_dashboard_panel_permi_url a:hover{color:#444 !important;text-decoration: underline;}
+.tam_dashboard_panel div span.ui-panel-title {afloat:right;awidth:83% !important;text-align:right !important;}
+
+
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*   Form Preview Window */
+.tam_main_form_body{width:100%;margin: auto;vertical-align:top !important;min-height:410px;display: table;border:none !important;}
+.tam_main_form_preview{vertical-align:top !important;height:99.0% !important;width:99.0%;min-height:380px;margin:5px 5px 5px 5px !important; padding:5px 5px 5px 5px !important;display: table;
+border: 0px solid #e0e0e0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;border-radius: 3px;}
+.tam_main_form_preview div{border:none !important;}
+
+
+.tam_form_preview_body_panel_accordion{border:1px solid red !important;-webkit-border-radius: 3px;-moz-border-radius: 3px !important;border-radius: 3px!important;}
+.tam_form_preview_body_panel_tab{width:99.3% !important;padding:3px !important;margin:3px !important;text-align:center;border:1px solid red !important;-webkit-border-radius: 3px;-moz-border-radius: 3px !important;border-radius: 3px!important;}
+.tam_form_preview_body_panel_tab_panel{width:99.5%;padding:3px;margin:3px;}
+
+
+.no_border{border:none !important;}
+.tam_form_title{color: #083169;font-size: 15px !important;font-family: Al-Jazeera-Arabic-Bold !important;}
+.tam_form_notes{color: #7f7f7f;font-size: 12px;font-family: Al-Jazeera-Arabic-Bold !important;}
+
+.tam_form_preview{width:98%;margin:5px 0px 0px 0px !important; padding:5px 0px 0px 0px !important;;display: table;border:none !important;}
+
+
+.tam_form_preview_body_col{vertical-align:top !important;width:74% !important; margin:3px !important; padding:3px !important;
+border:1px solid gray !important;-webkit-border-radius: 3px;-moz-border-radius: 3px !important;border-radius: 3px!important;
+}
+.tam_form_preview_body_panel{vertical-align:top !important;width:99% !important; margin:2px !important; padding:2px !important;aborder:1px solid #e0e0e0 !important;}
+
+.tam_form_preview_decsions{height:50px !important;vertical-align:bottom !important;text-align:center;vertical-align:middle;border:none !important;}
+.tam_form_preview hr{ border: 0;height: 1px;background: #083169;background-image: linear-gradient(to right, #e0e0e0, #083169, #e0e0e0);}
+
+.tam_form_preview_overlay{vertical-align:middle !important;text-align:center;width:800px;margin:5px 0px 0px 0px !important; padding:5px 0px 0px 0px !important;;display: table;border: 0px solid #e0e0e0;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;border-radius: 3px;text-align:center;vertical-align:middle;}
+
+.tam_form_preview_body_col .ui-accordion-header .ui-helper-reset .ui-state-default .ui-state-active .ui-corner-top{
+	margin:5px 5px 5px 5px !important; padding:5px 5px 5px 5px !important;display: table;border: 1px solid red;-webkit-border-radius: 3px;
+-moz-border-radius: 3px;border-radius: 3px;width:100% !important;;
+}
+.tam_form_preview_body_plugins_panel h3 {border: 1px solid #e0e0e0 !important;-webkit-border-radius: 3px !important;
+-moz-border-radius: 3px !important;border-radius: 3px !important;}
+
+.tam_form_preview_body_panel h3 {border: 1px solid #e0e0e0 !important;-webkit-border-radius: 3px !important;
+-moz-border-radius: 3px !important;border-radius: 3px !important;}
+
+/* .tam_form_preview_body_panel div{border: 1px solid #e0e0e0 !important;} */
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*   print OrganizationData */
+
+.tam_print_header{width:100%;vertical-align:top !important;height:40px;}
+.tam_print_header .content{display: table;border:none !important;}
+
+
+
+.tam_print_body{display: table;border:none !important;width:100% !important;}
+.tam_print_section{vertical-align:top !important;display: table;border:1px solid #bfbfbf !important;width:100% !important;dirction:ltr;}
+.tam_print_section_title{background:#e0e0e0;padding:3px;margin:3px;color: #4d4d4d;font-size: 14px !important;
+	font-family: Al-Jazeera-Arabic-Bold !important;border-bottom:1px solid gray;border:1px solid #bfbfbf !important;
+	-webkit-border-radius: 1px;font-face:bold;font-weight:bolder;-moz-border-radius: 1px;border-radius: 1px;}
+
+.tam_main_section_row{width:100%  !important;;border:none !important;background: url("#{resource['images/inputbg.png']}") repeat !important;
+border-bottom:1px solid #bfbfbf !important;}
+.tam_main_section_element{float:right ;border:0px solid red !important;width:98% !important;font-weight: bold;}
+
+
+.tam_main_section_data{border:none !important;width:24% !important;color:green;}
+.tam_main_section_none{border:none !important;width:1% !important;border-right:1px solid #bfbfbf !important;}
+.tam_main_section_noborder{vertical-align:top !important;border:none !important;width:100% !important;}
+.tam_main_section_data span{font-weight: 600 !important;color:green;}
+
+.tam_print_sub_section{vertical-align:top !important;display: table;border:none !important;width:100% !important;dirction:ltr;}
+.tam_print_sub_section_title{background:#f0f3d5;padding:3px;margin:3px;color: #4d4d4d;font-size: 13px !important;
+	font-family: Al-Jazeera-Arabic-Bold !important;}
+
+
+.tam_main_print_datatable{background:#e0e0e0;padding:3px;margin:3px;color: #4d4d4d;font-size: 14px !important;
+	font-family: Al-Jazeera-Arabic-Bold !important;border-bottom:1px solid #BFBFBF !important;border-right:1px solid #BFBFBF !important;
+	-webkit-border-radius: 3px;width:99% !important;;
+-moz-border-radius: 3px;border-radius: 3px;}
+
+
+.tam_main_print_datatable thead tr th{background:#e5e5e5!important;padding:3px!important;margin:3px;border:1px solid #BFBFBF !important;}
+.tam_main_print_datatable tbody tr td{border:1px solid #BFBFBF!important;}
+.tam_main_print_datatable tr:nth-child(odd) {background-color:#ffffff;height:22px !important;}
+.tam_main_print_datatable tr:nth-child(even) {height:22px !important;background:#f7f8dd!important;}
+
+.tam_print_section_data{float:right;font-weight: 600 !important;border:none !important;width:25% !important;color:green;}
+.tam_print_section_element{float:right;font-weight: 600 !important;font-face: bold !important;}
+
+.tam_print_section tr:nth-child(odd) {background-color:#ffffff;height:22px !important;}
+.tam_print_section tr:nth-child(even) {height:22px !important;background:#f7f8dd!important;}
+
+/* This is the overriden classses */
+/* _____________________________________________________________________________________________________________________ */
+/*  evaluation form Preview */
+
+.tam_eval_form_preview{vertical-align:top !important;height:100% !important;width:100%%;min-height:380px;margin:5px 5px 5px 5px !important; padding:5px 5px 5px 5px !important;display: table;
+}
+.tam_eval_form_preview_body_panel{vertical-align:top !important;width:75% !important;  margin:2px !important; padding:2px !important;}
+.tam_eval_form_section{width:100% !important;border:1px solid #a0a0a0 !important;
+	background-image: linear-gradient(to right, #e0e0e0, #ffffff, #e0e0e0) !important;}
+.tam_eval_form_header_col{background-image: linear-gradient(to right, #eFeFeF, #e0e0e0, #eFeFeF) !important;}
+
+.previewEvalField{border:1px solid #a0a0a0 !important; width:100% !important;margin:2px !important;}
+.previewEvalField .previewFieldLabel{border:0px solid #a0a0a0 !important;background:none !important;width:100% !important; }
+.previewEvalField .tam_eval_element{border:1px solid #a0a0a0 !important;background:none !important;width:100%;background:none !important;}
+
+.ts_eval_form_preview_elem { -webkit-border-radius: 5px;padding:5px;margin:5px;
+-moz-border-radius: 5px;border-radius: 5px;border:1px solid #e0e0e0 !important;width:98% !important;
+	}
+.tam_eval_grade_col{background-image: linear-gradient(to right, #e2edf0, #e2edf0, #e2edf0) !important;
+border:1px solid #4d4d4d !important;
+-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;border:1px solid #4d4d4d !important;
+line-height:24px;
+}
+.tam_eval_grade_col input{height:20px !important;}
+.tam_eval_form_preview hr{ border: 0;height: 1px;background: #083169;background-image: linear-gradient(to right, #e0e0e0, #083169, #e0e0e0);}
+
+/* -------------------------------------------------------------------------------------- */
+/* ------------------------------- plugins Column  -------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+.tam_form_preview_body_plugins_col{width:25% !important;vertical-align:top; margin:2px !important; 
+padding:2px !important;border-top:1px solid #a0a0a0 !important; background-color: #fdfdfd !imortant;
+}
+
+
+.tam_form_preview_body_plugins_accordion{
+	width:auto !important;vertical-align:top; margin:0px !important; 
+padding:0px !important;border: 1px solid #add8e6!important;-webkit-border-radius: 3px !important;
+-moz-border-radius: 3px;border-radius: 3px !important;
+-webkit-box-shadow:inset 0 0 5px #ADD8E6 !important;
+-moz-box-shadow:inset 0 0 5px #ADD8E6 !important;
+box-shadow:inset 0 0 5px #ADD8E6 !important; width:99.9% !important;vertical-align:top !important
+
+}
+.tam_form_preview_body_plugins_panel_tab{width:25% !important;vertical-align:top; margin:1px !important; padding:1px !important;border:1px solid red !important;}
+.tam_form_preview_body_finance{border:1px solid red !important;}
+.tam_form_preview_body_plugins_table{
+width:100% !important;padding:0px !important;border: 1px solid #add8e6 !important;
+vertical-align:top !important;}
+.tam_form_preview_body_plugins_table tr:nth-child(odd) {background-color:#ffffff;height:22px !important;}
+.tam_form_preview_body_plugins_table tr:nth-child(even) {height:22px !important;
+background-image: linear-gradient(to right, #ffffff, #e0e0e0, #e0e0e0) !important;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* ------------------------------- Form 2 columns  -------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+.tam_formbody{afloat:right !important;border: 1px solid #e0e0e0 !important;-webkit-border-radius: 3px !important;padding:10px !important;margin:10px !important;
+-moz-border-radius: 3px;border-radius: 3px !important;
+-webkit-box-shadow:inset 0 0 5px #f5f5f5 !important;
+       -moz-box-shadow:inset 0 0 5px #f5f5f5 !important;
+            box-shadow:inset 0 0 5px #f5f5f5 !important; height:98.6% !important;width:98.0% !important;vertical-align:top !important}
+ 
+
+.tam_form_ctrl_col{float:right !important;width:95.0% !important;vertical-align:top !important;
+					padding:5px !important;margin:5px !important;}
+					
+
+
+/* not used */
+.tam_form_elem_col{width:13.0% !important;vertical-align:top !important;font-size: 12px !important;
+					background-image:linear-gradient(to right, #ffffff, #f5f5f5, #ffffff) !important;
+					padding:5px !important;margin:5px !important;}
+ /* ------------------------------------------------------------------------------------- */
+
+.tam_form_separator{
+	background-image: linear-gradient(to right, #ffffff, #ffffff, #add8e6) !important;
+    width:9px !important; border-right:1px solid #a0a0a0 !important;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* -------------------------------Advanced  Upload file  ------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+.tam_form_ctrl_col input{width:98.0% !important;border:1px solid #e0e0e0 !important;line-height:25px !important;background: url("#{resource['images/inputbg.png']}") repeat !important;
+}
+.tam_form_ctrl_col textarea{width:98.0% !important;border:1px solid #e0e0e0 !important;line-height:25px !important; background: url("#{resource['images/inputbg.png']}") repeat !important;overflow: scroll;
+}
+.tam_form_ctrl_col .tam_file_upload {border:1px solid #e0e0e0 !important;background:transparent !important;padding:0px !important;margin:0px !important;}
+.tam_form_ctrl_col .tam_file_upload .ui-fileupload-buttonbar{border: 1px solid #e0e0e0!important;background:#f0f0f0 !important;padding:0px !important;margin:0px !important;}
+.tam_form_ctrl_col .tam_file_upload .ui-fileupload-buttonbar .ui-button{font-size:12px !important;border: 1px solid #e0e0e0!important;background:#f0f0f0 !important;padding:0px !important;margin:0px !important;}
+.tam_form_ctrl_col .tam_file_upload .ui-progressbar{border: 1px solid #0000ff!important;width:60px !important;height:22px !important;padding:0px !important;margin:0px !important;}
+.tam_form_ctrl_col .tam_file_upload .tam_remove_file{width:18px !important;height:18px !important;padding:0px !important;margin:0px !important;}
+ 
+ /* -------------------------------------------------------------------------------------- */
+/* ------------------------------- Form controls  -------------------------------------- */
+/* -------------------------------------------------------------------------------------- */
+  .tam_form_ctrl_col .tam_form_tree{
+ background: url("#{resource['images/inputbg.png']}") repeat-y !important;border:1px solid #e0e0e0 !important;;
+ }
+ .ts_required_star{height:10px !important;width:10px !important;}
+ .tam_form_field_desc{color: grey;height:22px;font-size:10px !important;color:#a7a7a7}
+
+.tam_form_ctrl_col .ui-calendar input{
+width:98.0% !important;border:1px solid #e0e0e0 !important;line-height:25px !important;
+background: url("#{resource['images/calendar.png']}") !important;
+background-repeat:no-repeat !important;
+background-attachment: fixed ;
+background-position: 3px 3px !important;
+
+border:1px solid #DADADA !important;
+font-size:14px !important;
+box-shadow:0 0 2px !important;
+-webkit-box-shadow:0 0 1px !important;
+/* For I.E */
+-moz-box-shadow:0 0 1px !important;
+/* For Mozilla Web Browser*/
+border-radius:2px !important;
+-webkit-border-radius:2px !important;
+/* For I.E */
+-moz-border-radius:2px !important;
+/* For Mozilla Web Browser*/
+ }
+/* ----------------------------- tree container -------------------------------------------------------- */
+
+.tam_form_ctrl_col .ui-tree-container{
+	height:150px !important;overflow-y: scroll !important;
+	  border:1px solid #e0e0e0 !important;
+box-shadow:0 0 2px !important;
+-webkit-box-shadow:0 0 1px !important;
+/* For I.E */
+-moz-box-shadow:0 0 1px !important;
+/* For Mozilla Web Browser*/
+border-radius:2px !important;
+-webkit-border-radius:2px !important;
+/* For I.E */
+-moz-border-radius:2px !important;
+/* For Mozilla Web Browser*/
+	}
+/* ---------------------------------------- Radio selection--------------------------------------------- */
+.tam_form_ctrl_col .ui-selectoneradio {width:100% !important;border-bottom:1px solid #e0e0e0 !important;}	
+.tam_form_ctrl_col .ui-selectoneradio td{}
+/* improve visual readability for IE8 and below */
+.tam_form_ctrl_col .ui-selectoneradio tr{}
+/*  Define the background color for all the ODD table columns  */
+.tam_form_ctrl_col .ui-selectoneradio tr td:nth-child(odd){ 
+		width:55px !important;height:25px !important;border:1px solid #e0e0e0 !important;
+		font-size:14px !important;text-align:center !important;vertical-align:bottom !important;
+	}
+	
+	
+	
+	/*  Define the background color for all the EVEN table columns  */
+	.tam_form_ctrl_col .ui-selectoneradio tr td:nth-child(even){
+		width:43%;padding:5px;
+	}
+
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------  Organization Hirerchy Tree  ------------------------------ */
+/* -------------------------------------------------------------------------------------- */
+.tam_org_tree .ui-diagram-element {
+    width:120px;height:40px;text-align: center;box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 2px; border: 1px solid #1e90ff;background-color: #e5e5e5;
+    color: #0000ff;}
+.tam_org_tree .ui-diagram-success {}
+.tam_org_tree .ui-diagram-fail { }
+.tam_org_tree .flow-label {font-size: 12px;font-weight: bold;color: #a52a2a;}
+/* -------------------------------------------------------------------------------------- */
+.tam_sep_line{ border: 0;height: 1px;background: #083169;background-image: linear-gradient(to right, #e0e0e0, #7f7f7f, #e0e0e0);}
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------  tasks data  ------------------------------ */
+/* -------------------------------------------------------------------------------------- */
+.tam_tasksBox_details{min-height:300px;}
+.tam_tasksBox_table{width:100%;float:right}
+.tam_tasksBox_elem{width:10%;font-size: 12px !important;font-weight:600px;}
+.tam_tasksBox_data{width:40%;}
+
+/* -------------------------------------------------------------------------------------- */
+/* --------------------------  animated progressbar  ------------------------------ */
+/* -------------------------------------------------------------------------------------- */
+.animated {background-image: linear-gradient(to right, #ffffff, #ffffff, #ffffff);}
+.tam_progressText{font-size: 12px !important; font-family: 'Al-Jazeera-Arabic-Regular' !important;color:#0000ff;}
+.tam_progressDlg .ui-widget-header{
+	background-image: linear-gradient(to right, #0000FF, #0000FF, #073e69);}
+
+
+
+

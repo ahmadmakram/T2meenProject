@@ -1,6 +1,7 @@
 package com.tameen.controller;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,7 +26,12 @@ public class SearchController implements Serializable {
 		searchList.put("Iqama", "Iqama");
 		searchList.put("Project", "project");
 		searchList.put("acc", "acc");
-
+		project=new Project();
+		project.setId(1l);
+		project.setName("xxxxxxxx");
+		project.setInsertionDate(new Date());
+		project.setProjectValue(20000111);
+		project.setInsertionDate(new Date());
 	}
 
 	public void search() {
@@ -68,6 +74,22 @@ public class SearchController implements Serializable {
 		if (searchType != null && !searchType.equals(""))
 			System.out.println(searchType);
 
+	}
+
+	public Project getProject() {
+		return project;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+	public SearchService getSearchService() {
+		return searchService;
+	}
+
+	public void setSearchService(SearchService searchService) {
+		this.searchService = searchService;
 	}
 
 }

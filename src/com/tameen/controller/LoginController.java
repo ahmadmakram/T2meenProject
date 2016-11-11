@@ -42,7 +42,7 @@ public class LoginController extends BaseController implements Serializable {
 				if (user.getPassword().equals(getPassword())){
 					System.out.println("true");
 					setLoggedInUser(user);
-					setCurrentPath("/xhtml/index.xhtml");
+					setCurrentPath("/xhtml/projectData.xhtml");
 					return "home.xhtml";
 				}
 		} else {

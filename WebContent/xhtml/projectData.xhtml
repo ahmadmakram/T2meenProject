@@ -1,0 +1,238 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+
+			<p:panel id="addPanelHolder" styleClass="tam_print_body">
+				<p:panelGrid id="tabViewId">
+					
+					<p:panelGrid styleClass="tam_print_section">
+						<p:row>
+						<p:column colspan="5" styleClass="tam_print_section_title">
+								<div id="userDataPanel">#{msgs.charity_user_Data}</div>
+							</p:column>
+						</p:row>
+					
+						<p:row styleClass="tam_main_section_row" >
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="user_title" value="#{msgs.common_full_name} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="user_title" value="#{searchController.project.id}" /> &#160;
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="email" value="#{msgs.common_email} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="email" value="#{searchController.project.name}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="username" value="#{msgs.user_userName} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="username" value="#{searchController.project.insertionDate}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="faxNumber" value="#{msgs.emp_fax_num} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="faxNumber" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="emp_n_Id" value="#{msgs.emp_n_Id} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="emp_n_Id" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="phoneNumber" value="#{msgs.commn_gwaal} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="phoneNumber" maxlength="9" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						
+						<p:row>
+						<p:column colspan="5" styleClass="tam_print_section_title">
+								<div id="userDataPanel">#{msgs.charity_data}</div>
+							</p:column>
+						</p:row>
+					
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="charityName" value="#{msgs.charity_Name} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="charityName" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="isMain" value="#{msgs.charity_is_main} :" />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="isMain" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="parent_charity" value="#{msgs.charity_main} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="parent_charity" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="charity_class" value="#{msgs.charity_class} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="charity_class" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="foundDate" value="#{msgs.charity_foundation_date} :" />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="foundDate" value="#{searchController.project.projectValue}">
+								</h:outputText>
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="supervisory" value="#{msgs.charity_supervisory} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="supervisory" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="charityphoneNumber" value="#{msgs.phoneNumber} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="charityphoneNumber" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="charityfaxNumber" value="#{msgs.emp_fax_num} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="charityfaxNumber" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="country" value="#{msgs.countryStructure_countryName} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="country" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="countryUnit" value="#{msgs.emp_country_unit} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="countryUnit" readonly="true" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="permissionSource" value="#{msgs.charity_permssionSource} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="permissionSource" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="permissionNum" value="#{msgs.charity_permssionNum} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="permissionNum" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="permission_end_date" value="#{msgs.charity_permssion_end_date} :" />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="permission_end_date" value="#{searchController.project.projectValue}">
+								</h:outputText>
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="address" value="#{msgs.emp_address} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="address" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="webSite" value="#{msgs.common_webSite} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="webSite" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="mangaerName" value="#{msgs.charity_exec_mang_name} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="mangaerName" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row>
+						<p:column colspan="5" styleClass="tam_print_section_title">
+								<div id="userDataPanel">#{msgs.charity_banks_account}</div>
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="bank" value="#{msgs.bank_name} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="bank" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="bankAccountName" value="#{msgs.bank_account_name} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="bankAccountName" value="#{searchController.project.projectValue}"/>
+							</p:column>
+						</p:row>
+						<p:row styleClass="tam_main_section_row">
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="ibyanNumber" value="#{msgs.ibyan_number} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="ibyanNumber" value="#{searchController.project.projectValue}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="accountNumber" value="#{msgs.financial_accountNumber} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="accountNumber" value="#{searchController.project.projectValue}" />
+							</p:column>
+						</p:row>
+						<p:row>
+						<p:column colspan="5" styleClass="tam_print_section_title">
+								<div id="userDataPanel">#{msgs.charity_other_data}</div>
+							</p:column>
+						</p:row>
+						
+					</p:panelGrid>
+				</p:panelGrid>
+			</p:panel>
+			
+</h:body>
+</html>
