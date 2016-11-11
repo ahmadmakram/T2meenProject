@@ -19,7 +19,7 @@
 		<p:growl id="msg" showDetail="true" life="3000" />
 		<h:inputText id="username" value="#{loginController.userName}" required="true"  />
 		<p:watermark for="username" value="user" />
-		<h:inputSecret id="password" value="#{loginController.password}" required="true" label="password" />
+		<h:inputSecret id="password" value="#{loginController.password}" required="true" label="password" />	
 		<p:watermark for="password" value="pass" />
         <h:commandButton value="Login" update="msg" action="#{loginController.loginAction}" />
          

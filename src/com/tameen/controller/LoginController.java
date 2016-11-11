@@ -16,10 +16,10 @@ import com.tameen.service.UserService;
 import com.tameen.util.Constants;;
 
 @Component
-@Scope(value="session")
+@Scope(value = "session")
 public class LoginController extends BaseController implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Autowired
 	private UserService userService;
 	private String userName;
@@ -33,33 +33,29 @@ public class LoginController extends BaseController implements Serializable {
 		System.out.println("login controller");
 	}
 
-	
-	public String loginAction() {		
+	public String loginAction() {
 		if (userName == null && userName.isEmpty())
-			return"";
-			User user=userService.getUserByUsername(userName);
-			if (user != null ) {
-				if (user.getPassword().equals(getPassword())){
-					System.out.println("true");
-					setLoggedInUser(user);
-					setCurrentPath("/xhtml/index.xhtml");
-					return "home.xhtml";
-				}
+			return "";
+		User user = userService.getUserByUsername(userName);
+		if (user != null) {
+			if (user.getPassword().equals(getPassword())) {
+				System.out.println("true");
+				setLoggedInUser(user);
+				setCurrentPath("/xhtml/index.xhtml");
+				return "home.xhtml";
+			}
 		} else {
 			System.out.println("wrong user name");
-			FacesContext.getCurrentInstance().addMessage(
-                    null,
-                    new FacesMessage(FacesMessage.SEVERITY_WARN,
-                    "Invalid Login!",
-                    "Please Try Again!"));
-			return"";
-		}
+			FacesContext.getCurrentInstance().addMessage(null,
+					new FacesMessage(FacesMessage.SEVERITY_WARN, "Invalid Login!", "Please Try Again!"));
 			return "";
+		}
+		return "";
 	}
+
 	private void applyLanguage() {
-		FacesContext.getCurrentInstance().getViewRoot()
-				.setLocale(new Locale(this.locale));
-		
+		FacesContext.getCurrentInstance().getViewRoot().setLocale(new Locale(this.locale));
+
 	}
 
 	public void changeToArabic() {
@@ -76,30 +72,28 @@ public class LoginController extends BaseController implements Serializable {
 		this.localeId = (long) Constants.Codes.EN;
 	}
 
-	
 	public void logout() throws IOException {
 		FacesContext.getCurrentInstance().getExternalContext().invalidateSession();
-		FacesContext.getCurrentInstance().getExternalContext().redirect(
-                FacesContext.getCurrentInstance().getExternalContext().getApplicationContextPath()+"/login.xhtml?faces-redirect=true");
+		FacesContext.getCurrentInstance().getExternalContext()
+				.redirect(FacesContext.getCurrentInstance().getExternalContext().getApplicationContextPath()
+						+ "/login.xhtml?faces-redirect=true");
 	}
 
 	public String getPassword() {
 		return password;
 	}
 
-
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
 
 	public String getUserName() {
 		return userName;
 	}
 
-
 	public void setUserName(String userName) {
 		this.userName = userName;
+
 	}
 
 }

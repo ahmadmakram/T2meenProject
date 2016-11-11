@@ -21,6 +21,7 @@
 	<param-name>primefaces.THEME</param-name>
 	<param-value>afternoon</param-value>
 </context-param>
+	
   <welcome-file-list>
     <welcome-file>login.xhtml</welcome-file>
   </welcome-file-list>
