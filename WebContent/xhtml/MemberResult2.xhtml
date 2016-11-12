@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+		<p:panelGrid id="resultgrid"  rendered="#{not empty searchController.memberResult.id}">
+		
+				<p:row>
+						<p:column colspan="5" styleClass="tam_print_section_title">
+								<div id="memberDataPanel"><h1>Member Details :</h1></div>
+						</p:column>
+				</p:row>
+				<p:row styleClass="tam_main_section_row" >
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="user_title" value="#{msg.member_id} :" />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="user_title" value="#{searchController.memberResult.id}" />
+							</p:column>
+							<p:column styleClass="tam_main_section_none"></p:column>
+							<p:column styleClass="tam_main_section_element">
+								<p:outputLabel for="email" value="#{msg.idNumber} : " />
+							</p:column>
+							<p:column styleClass="tam_main_section_data">
+								<h:outputText id="email" value="#{searchController.memberResult.idNumber}" />
+							</p:column>
+				</p:row>
+				<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="member_Name" value="#{msg.member_Name} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="member_Name" value="#{searchController.memberResult.name}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="empId" value="#{msg.empId} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="empId" value="#{searchController.memberResult.empId.id}" />
+								</p:column>
+					</p:row>
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="dependentIdNumber" value="#{msg.dependentIdNumber} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="dependentIdNumber" value="#{searchController.memberResult.empId.name}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="gender" value="#{msg.gender} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="gender" value="#{searchController.memberResult.gender}" />
+								</p:column>
+					</p:row>
+		
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="relation" value="#{msg.relation} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="relation" value="#{searchController.memberResult.relation}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="birthDate" value="#{msg.birthDate} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="birthDate" value="#{searchController.memberResult.birthDate}" />
+								</p:column>
+					</p:row>
+						<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="age" value="#{msg.age} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="age" value="#{searchController.memberResult.age}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="country" value="#{msg.country} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="country" value="#{searchController.memberResult.country}" />
+								</p:column>
+					</p:row>
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="mobile" value="#{msg.mobile} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="mobile" value="#{searchController.memberResult.mobile}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="department" value="#{msg.department} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="department" value="#{searchController.memberResult.department.name}" />
+								</p:column>
+					</p:row>
+						<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="insur_Class" value="#{msg.insur_Class} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="insur_Class" value="#{searchController.memberResult.insurClass}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="insuranceEffectiveDate" value="#{msg.insuranceEffectiveDate} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="insuranceEffectiveDate" value="#{searchController.memberResult.insuranceEffectiveDate}" />
+								</p:column>
+					</p:row>
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="insuranceExpiryveDate" value="#{msg.insuranceExpiryveDate} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="insuranceExpiryveDate" value="#{searchController.memberResult.insuranceExpiryveDate}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="insurancePolicyNo" value="#{msg.insurancePolicyNo} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="insurancePolicyNo" value="#{searchController.memberResult.insurancePolicyNo}" />
+								</p:column>
+					</p:row>
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="insuranceCompany" value="#{msg.insuranceCompany} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="insuranceCompany" value="#{searchController.memberResult.insuranceCompany}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="premiumValue" value="#{msg.premiumValue} : " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="premiumValue" value="#{searchController.memberResult.premiumValue}" />
+								</p:column>
+					</p:row>
+					<p:row styleClass="tam_main_section_row" >
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="status" value="#{msg.status} :" />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="status" value="#{searchController.memberResult.status.name}" />
+								</p:column>
+								<p:column styleClass="tam_main_section_none"></p:column>
+								<p:column styleClass="tam_main_section_element">
+									<p:outputLabel for="blank" value=" " />
+								</p:column>
+								<p:column styleClass="tam_main_section_data">
+									<h:outputText id="blank" value="" />
+								</p:column>
+					</p:row>
+						
+		</p:panelGrid>
+		<h:panelGroup rendered="#{empty searchController.memberResult.id}">
+		<h2>No Data Found</h2>
+		</h:panelGroup>
+</h:body>
+</html>
