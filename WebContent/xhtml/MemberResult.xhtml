@@ -5,9 +5,10 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui">
-<h:body style="background: url('#{resource['images:BG.jpg']}') repeat">
-	<h:form>
-		<p:panelGrid id="resultgrid" columns="2">
+<h:body>
+	<h:form> 
+		<p:panelGrid id="resultgrid" columns="2" rendered="#{not empty searchController.memberResult.id}">
+		<h1>Memeber Details :</h1>
 			<p:panelGrid id="firstcolumn"  columns="2">
 				<h:outputText value="#{msg.member_id}" />
 				<h:outputText value="#{searchController.memberResult.id}" />
@@ -49,10 +50,11 @@
 				<h:outputText value="#{searchController.memberResult.premiumValue}" />
 				<h:outputText value="#{msg.status}" />
 				<h:outputText value="#{searchController.memberResult.status.name}" />
-				
-				
 			</p:panelGrid>
 		</p:panelGrid>
+		<h:panelGroup rendered="#{empty searchController.memberResult.id}">
+		<h2>No Data Found</h2>
+		</h:panelGroup>
 	</h:form>
 </h:body>
 </html>
