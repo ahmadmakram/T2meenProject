@@ -7,17 +7,17 @@
 
  <ui:composition>
 		<div class="wht-bg">
-			<div class="container">				
+			<div class="header-title"><p:outputLabel>Ta2meen	</p:outputLabel></div>		
 					<div class="btm-usr">
+					<p:outputLabel styleClass="welcom-label">#{msg.common_welcome}  :  </p:outputLabel>
+					<p:outputLabel styleClass="user-label">#{loginController.loggedInUser.fullName}</p:outputLabel>
+					<i class="sep-sm"></i>
 						<h:form>
-							<p>#{msg.common_welcome} : #{loginController.loggedInUser.fullName}</p>
-							<i class="sep-sm"></i>
-							<p:commandLink class="logout" actionListener="#{loginController.logout()}">
+							<p:commandLink class="logout" actionListener="#{loginController.logout}">
 							</p:commandLink>
 						</h:form>
 					</div>
 				</div>
-			</div>
 		
 	 </ui:composition>
 </html>

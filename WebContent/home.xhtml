@@ -18,11 +18,13 @@
 	<ui:define name="body">
 		<p:messages id="messages" autoUpdate="true" closable="false" />
 		<h:form id="searchForm">
-			<h:panelGrid columns="2" cellpadding="5">
+			<h:panelGrid columns="2" cellpadding="5" styleClass="selectionPanel">
+			<h:panelGroup>
+			<h:panelGrid columns="2" cellpadding="5" >
 				<p:outputLabel for="searchMenuId" value="Search By: " />
 				<p:selectOneMenu id="searchMenuId" required="true"
 					requiredMessage="#{msg.searchtype_required}"
-					value="#{searchController.searchType}" style="width:150px">
+					value="#{searchController.searchType}" >
 					<f:ajax listener="#{searchController.onCountryChange}" render="searchForm" />
 					<f:selectItem itemLabel="Search By" itemValue=""
 						noSelectionOption="true" />
@@ -34,11 +36,15 @@
 					requiredMessage="#{msg.searchval_required}">
 					<f:convertNumber integerOnly="true" type="number" pattern="" />
 				</p:inputText>
-				<p:commandButton value="Search" action="#{searchController.search}"
+				</h:panelGrid>
+				</h:panelGroup>
+				<h:panelGroup>
+				<p:commandButton id="searchBtn" value="Search" action="#{searchController.search}"
 					update="bodyPanel" />
+					</h:panelGroup>
 			</h:panelGrid>
 			<p:separator />
-			<h:panelGroup id="bodyPanel">
+			<h:panelGroup id="bodyPanel" styleClass="container">
 				<ui:include src="#{searchController.currentPath}" />
 			</h:panelGroup>
 			</h:form>
