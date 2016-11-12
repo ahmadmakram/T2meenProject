@@ -4,7 +4,7 @@ public enum PagesURL {
 
 	HOME_PAGE("home.xhtml"),
 	LOGIN("login.xhtml"),
-	MEMBER_RESULT("/xhtml/MemberResult.xhtml"),
+	MEMBER_RESULT("/xhtml/MemberResult2.xhtml"),
 	EMPLOYEE_RESULT("/xhtml/EmployeeResult.xhtml"),
 	INDEX("/xhtml/index.xhtml");
 	
